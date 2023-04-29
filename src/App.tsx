@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from "./styles/TaskTwoPage.module.css";
+import { Background } from "./components/Background";
+import { Header } from "./components/Header";
+import { Main } from "./components/Main";
+import { Footer } from "./components/Footer";
+import { FC, useEffect, useState } from "react";
 
-function App() {
+export const App: FC = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWindowWidth(window.innerWidth);
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {windowWidth > 700 && <Background />}
+      <div className={styles.app}>
+        <Header />
+        <Main windowWidth={windowWidth} />
+        <Footer />
+      </div>
+    </>
   );
-}
-
-export default App;
+};

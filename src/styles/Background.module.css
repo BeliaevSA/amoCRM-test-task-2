@@ -1,0 +1,58 @@
+.purple-light {
+  width: 259px;
+  height: 259px;
+  background-color: #833ab4;
+  opacity: 0.5;
+  filter: blur(196px);
+  position: absolute;
+  top: -154px;
+  left: 602px;
+}
+
+.red-light {
+  width: 311px;
+  height: 311px;
+  background-color: #961a1a;
+  opacity: 0.5;
+  filter: blur(196px);
+  position: absolute;
+  top: 251px;
+  left: -102px;
+}
+
+.purple-ball {
+  position: absolute;
+  z-index: -100;
+  left: 868px;
+  top: -2px;
+}
+
+.red-ball-big {
+  position: absolute;
+  z-index: -100;
+  left: 519px;
+  top: 83px;
+}
+
+.red-ball-small {
+  position: absolute;
+  z-index: -100;
+  left: 851px;
+  top: 547px;
+}
+
+@media screen and (max-width: 1000px) {
+  .red-ball-small,
+  .purple-ball {
+    display: none;
+  }
+
+  .purple-light {
+    left: 60%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .red-ball-big {
+    display: none;
+  }
+}

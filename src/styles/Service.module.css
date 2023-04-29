@@ -1,0 +1,16 @@
+.wrapper {
+  width: 164px;
+  padding-bottom: 30px;
+}
+
+.title {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+}
